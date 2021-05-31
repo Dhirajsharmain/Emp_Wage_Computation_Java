@@ -9,6 +9,6 @@ public class EmpWageComputation {
               if (empCheck == present)
                     System.out.println("Employee is Present");
               else
-                    System.out.println("Employee is Abscent");
+                    System.out.println("Employee is Absent");
         }
 }
