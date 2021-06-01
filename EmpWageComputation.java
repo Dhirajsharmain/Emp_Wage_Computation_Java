@@ -19,11 +19,11 @@ public class EmpWageComputation {
         	 empHrs = 8;
          }
          else if(empCheck == isPartTime) {
+        	 System.out.println("Employee is Part Time");
         	 empHrs = 4;
          }
          else {  
         	 System.out.println("Employee is Absent");
-             empHrs = 0;
          }
               
           empWage = empHrs * empRatePerHour;
