@@ -5,6 +5,7 @@ public class EmpWageComputation {
     	 //constants
     	 int present = 1;
     	 int empRatePerHour = 20;
+    	 
     	 //variables
          int empWage = 0;
          int empHrs = 0;
@@ -16,7 +17,7 @@ public class EmpWageComputation {
         	 empHrs = 8;
          }
          else {  
-            System.out.println("Employee is Absent");
+        	 System.out.println("Employee is Absent");
              empHrs = 0;
          }
               
