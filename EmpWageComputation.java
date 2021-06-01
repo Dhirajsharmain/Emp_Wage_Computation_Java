@@ -3,7 +3,6 @@
 public class EmpWageComputation {
      public static void main(String[] args) {
     	 //constants
-    	 int present = 1;
     	 int empRatePerHour = 20;
     	 int isFullTime = 1;
     	 int isPartTime = 2;
