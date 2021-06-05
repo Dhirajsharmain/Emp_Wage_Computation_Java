@@ -5,6 +5,7 @@ public class EmpWageComputation {
     public static final int EMP_RATE_PER_HOUR = 20;
     public static final int IS_FULL_TIME = 1;
     public static final int IS_PART_TIME = 2;
+    public static final int MAX_HRS_IN_MONTHS= 100;
 
     public static void main(String[] args) {
 
@@ -13,8 +14,10 @@ public class EmpWageComputation {
         int empHrs = 0;
         int numOfWorkingDays = 20;
         int totalEmpHrs = 0;
+        int totalWorkingDays = 0;
 
-        for (int i = 0; i < numOfWorkingDays; i++) {
+        while ( totalEmpHrs < MAX_HRS_IN_MONTHS && totalWorkingDays < numOfWorkingDays ) {
+            totalWorkingDays += 1 ;
             int empCheck = (int) Math.floor(Math.random() * 10) % 3;
             switch (empCheck) {
                 case IS_FULL_TIME:
