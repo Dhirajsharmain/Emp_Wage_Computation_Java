@@ -1,32 +1,34 @@
 //Employee Wage Computation Program in Java
 
 public class EmpWageComputation {
-	 //constants
-	 public static final int empRatePerHour = 20;
-	 public static final int isFullTime = 1;
-	 public static final int isPartTime = 2;
-     public static void main(String[] args) {
-    	 
-    	 //variables
-         int empWage = 0;
-         int empHrs = 0;
-              
-         int empCheck =(int) Math.floor(Math.random() * 10) % 3;
-              
-         switch (empCheck) {
-         	case isFullTime:
-         		System.out.println("Employee is Present");
-         		empHrs = 8;
-         		break;
-         	case isPartTime:
-         		System.out.println("Employee is Part Time");
-         		empHrs = 4;
-         		break;
-         	default:
-         		System.out.println("Employee is Absent");
-         }
-              
-          empWage = empHrs * empRatePerHour;
-          System.out.println("EmpWage: " +empWage);
-        }
+    //constants
+    public static final int EMP_RATE_PER_HOUR = 20;
+    public static final int IS_FULL_TIME = 1;
+    public static final int IS_PART_TIME = 2;
+
+    public static void main(String[] args) {
+
+        //variables
+        int empWage;
+        int empHrs = 0;
+		int numOfWorkingDays = 20;
+		int totalEmpHrs = 0;
+
+		for (int i = 0 ; i < numOfWorkingDays; i++){
+			int empCheck = (int) Math.floor(Math.random() * 10) % 3;
+			switch (empCheck) {
+				case IS_FULL_TIME:
+					empHrs = 8;
+					break;
+				case IS_PART_TIME:
+					empHrs = 4;
+					break;
+				default:
+			}
+			totalEmpHrs = totalEmpHrs+empHrs;
+		}
+
+        empWage = totalEmpHrs * EMP_RATE_PER_HOUR;
+        System.out.println("EmpWage: " + empWage);
+    }
 }
