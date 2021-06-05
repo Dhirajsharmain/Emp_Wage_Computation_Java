@@ -11,22 +11,22 @@ public class EmpWageComputation {
         //variables
         int empWage;
         int empHrs = 0;
-		int numOfWorkingDays = 20;
-		int totalEmpHrs = 0;
+        int numOfWorkingDays = 20;
+        int totalEmpHrs = 0;
 
-		for (int i = 0 ; i < numOfWorkingDays; i++){
-			int empCheck = (int) Math.floor(Math.random() * 10) % 3;
-			switch (empCheck) {
-				case IS_FULL_TIME:
-					empHrs = 8;
-					break;
-				case IS_PART_TIME:
-					empHrs = 4;
-					break;
-				default:
-			}
-			totalEmpHrs = totalEmpHrs+empHrs;
-		}
+        for (int i = 0; i < numOfWorkingDays; i++) {
+            int empCheck = (int) Math.floor(Math.random() * 10) % 3;
+            switch (empCheck) {
+                case IS_FULL_TIME:
+                    empHrs = 8;
+                    break;
+                case IS_PART_TIME:
+                    empHrs = 4;
+                    break;
+                default:
+            }
+            totalEmpHrs = totalEmpHrs + empHrs;
+        }
 
         empWage = totalEmpHrs * EMP_RATE_PER_HOUR;
         System.out.println("EmpWage: " + empWage);
